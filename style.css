@@ -1,7 +1,5 @@
 * {
 	margin: 0px;
-	/*margin-bottom: 0px;*/
-	/*outline: 1px solid red;*/
 }
 
 body {
@@ -21,7 +19,13 @@ body {
 
 a {
 	text-decoration: none;
+	color: #0059A1;
 }
+
+a:active, a:hover {
+	color: #0088cc;
+}
+
 
 /* --- HEADER / FOOTER --- */
 header, footer {
@@ -40,29 +44,46 @@ header {
 
 footer {
 	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 30px;
+}
+
+footer a {
+	color: white;
+}
+
+footer a:hover {
+	color: #004C8B;
 }
 
 
 /* --- NAV --- */
+.navbar {
+	margin-top: 10px;
+}
+
 .navbar img {
 	display: inline;
 }
 
 .nav {
 	float: right;
+	margin-top: 25px;
+	margin-right: 10px;
 }
 
 .nav a {
 	font-size: 18px;
-	margin-left: 10px;
+	margin-left: 15px;
 	color: #0059A1;
 }
 
-.nav a:active {
+.nav a:active, a:hover {
 	color: #0088cc;
 }
 
-@media (max-width:781px) {
+@media (max-width:845px) {
 	.nav {
 		display: none;
 	}
@@ -73,12 +94,12 @@ footer {
 /* --- CONTENT --- */
 .container > img {
 	width: 100%;
-	margin-top: 60px;
-	margin-bottom: 60px;
+	margin-top: 30px;
 }
 
 .thirds img {
 	width: 100%;
+	margin-top: 50px;
 }
 
 .main-thirds {
@@ -96,15 +117,36 @@ footer {
 	margin-left: 25px;
 }
 
-.thirds a {
-
-}
-
 .container > p {
 	margin: 10px;
 }
 
+.center {
+	text-align: center;
+}
 
+@media (max-width:755px) {
+	.main-thirds {
+		display: block;
+	}
+	.thirds {
+		width: 100%;
+	}
+	.thirds:last-child, .thirds:nth-child(2){
+		margin-left: 0px;
+	}
+	.thirds a {
+		color: #444;
+		font-weight: bold;
+	}
 
-
-
+	.footer {
+		display: block;
+	}
+	.footer div {
+		margin-bottom: 10px;
+	}
+	.right {
+		text-align: right;
+	}
+}
